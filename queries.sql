@@ -23,4 +23,4 @@ select * from animals
 WHERE name not in ('Gabumon');
 
 select * from animals
-WHERE weight_kg between 11.3 and 17.3;
+WHERE weight_kg between 10.4 and 17.3;
