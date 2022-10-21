@@ -28,3 +28,34 @@ insert into animals (name, date_of_birth, escape_attempts, neutered, weight_kg)
 
     INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg)
     VALUES ('Ditto', '2022/05/14', '4', 'true', '22.0');
+
+    INSERT INTO owners (full_name, age)
+    VALUES ('Sam Smith', 34);
+
+    INSERT INTO owners (full_name, age)
+    VALUES ('Jennifer Orwell', 19);
+
+    INSERT INTO owners (full_name, age)
+    VALUES ('Bob', 45);
+
+    INSERT INTO owners (full_name, age)
+    VALUES ('Melody Pond', 77);
+
+    INSERT INTO owners (full_name, age)
+    VALUES ('Dean Winchester', 14);
+
+    INSERT INTO owners (full_name, age)
+    VALUES ('Jodie Whittaker', 38);
+
+    INSERT INTO species (name)
+    VALUES ('Pokemon');
+    INSERT INTO species (name)
+    VALUES ('Digimon');
+
+    update animals set owner_id = 'Sam Smith' where name = 'Agumon';
+    update animals set owner_id = 'Jennifer Orwell' where name in ('Gabumon', 'Pikachu');
+    update animals set owner_id = 'Bob' where name in ('Devimon', 'Plantmon');
+    update animals set owner_id = 'Melody Pond' where name in ('Charmander', 'Squirtle', 'Blossom');
+    update animals set owner_id = 'Dean Winchester' where name in ('Angemon', 'Boarmon');
+
+    
