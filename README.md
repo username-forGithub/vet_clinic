@@ -1,7 +1,8 @@
-# Vet clinic database: create animals table
+# Vet clinic database: query multiple tables
 
-- Create tables in SQL.
-- Insert and query data in SQL.
+- Use primary key & foreign key mechanism for joining tables.
+- Query multiple tables.
+- Prepare complex queries that answer analytical questions.
 
 ## Author
 👤 **Bakhtiyor Yusubaliyev**
