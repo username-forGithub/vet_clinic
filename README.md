@@ -1,8 +1,8 @@
-# Vet clinic database: query multiple tables
+# Vet clinic database: add "join table" for visits
 
-- Use primary key & foreign key mechanism for joining tables.
-- Query multiple tables.
+- Understand the different types of relationships between tables.
 - Prepare complex queries that answer analytical questions.
+- Use primary key & foreign key mechanism for joining tables.
 
 ## Author
 👤 **Bakhtiyor Yusubaliyev**
