@@ -78,3 +78,58 @@ FROM animals JOIN owners ON animals.owners_id=owners.full_name
 GROUP BY owners.full_name
 order by max_num DESC
 LIMIT  1;
+
+select animals.name as animals_name, visits.date_visited, vets.name as vets_name from visits  
+join animals on visits.animal_id=animals.id 
+join vets on visits.vet_id=vets.id
+where vets.name = 'William Tatcher'
+order by visits.date_visited DESC
+LIMIT 1;
+
+select count(DISTINCT (animals.name)) as animals from visits  
+join animals on visits.animal_id=animals.id 
+join vets on visits.vet_id=vets.id
+where vets.name = 'Stephanie Mendez';
+
+select species.name, vets.name from specializations  
+join vets on vets.id=specializations.vet_id
+join species on species.id=specializations.species_id;
+
+select animals.name as animals_name, visits.date_visited, vets.name as vets_name from visits  
+join animals on visits.animal_id=animals.id 
+join vets on visits.vet_id=vets.id
+where vets.name = 'Stephanie Mendez' and visits.date_visited between '2020-04-01' and '2020-08-30';
+
+select animals.name, count(visits.date_visited) as visits_num from visits  
+join animals on visits.animal_id=animals.id 
+join vets on visits.vet_id=vets.id
+group by animals.name
+order by visits_num DESC
+LIMIT 1;
+
+select animals.name as animals_name, visits.date_visited, vets.name as vets_name from visits  
+join animals on visits.animal_id=animals.id 
+join vets on visits.vet_id=vets.id
+where vets.name = 'Stephanie Mendez'
+order by visits.date_visited asc
+LIMIT 1;
+
+select * from visits  
+join animals on visits.animal_id=animals.id 
+join vets on visits.vet_id=vets.id
+order by visits.date_visited desc
+LIMIT 1;
+
+select count(*) from vets ve
+left join visits v on ve.id = v.animal_id
+left join specializations s on s.species_id = ve.id
+left join species sp on sp.id = s.species_id
+where sp.id is null;
+
+select count(a.id), a.* from animals a
+join visits v on a.id=v.animal_id
+join vets ve on v.vet_id=ve.id
+where ve.name = 'Maisy Smith'
+group by a.id
+order by count(a.id) DESC
+LIMIT 1;
