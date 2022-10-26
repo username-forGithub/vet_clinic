@@ -48,3 +48,9 @@ CREATE TABLE medical_histories_join_treatments(
     CONSTRAINT medical_history_id_fkey FOREIGN KEY(histories_id) REFERENCES medical_histories(id),
     CONSTRAINT treatments_id_fkey FOREIGN KEY(treatment_id) REFERENCES treatments(id),
 )
+
+CREATE INDEX invoice_items_invoice_id ON invoice_items(invoice_id);
+CREATE INDEX medical_histories_patient_id ON medical_histories(patient_id);
+CREATE INDEX medical_histories_join_treatments_histories_id ON medical_histories_join_treatments(histories_id);
+CREATE INDEX medical_histories_join_treatments_treatment_id ON medical_histories_join_treatments(treatment_id);
+CREATE INDEX invoices_medical_history_id ON invoices(medical_history_id);
