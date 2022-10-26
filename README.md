@@ -1,13 +1,15 @@
-# Vet clinic database: add "join table" for visits
+# Create a database based on a diagram
 
-- Understand the different types of relationships between tables.
-- Prepare complex queries that answer analytical questions.
-- Use primary key & foreign key mechanism for joining tables.
+- Diagram a data model clearly and explain what it's doing.
 
-## Author
+
 👤 **Bakhtiyor Yusubaliyev**
 - GitHub: [@bakhtiyorY](https://github.com/githubhandle)
 - Twitter: [@bakhtiyor-yusubali](https://twitter.com/twitterhandle)
+
+👤 **Momanyi**
+- GitHub: [@fullstop125](https://github.com/fullstop125)
+- Twitter: [@MosesHassany](https://twitter.com/MosesHassany)
 
 ## 🤝 Contributing
 
